@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'tutorial_11_2.dart';
 
 class Tutorial11Page extends StatelessWidget {
   const Tutorial11Page({super.key});
@@ -26,6 +27,7 @@ class Tutorial11Page extends StatelessWidget {
               ],
             ),
           ),
+          const Tutorial112Page(),
         ],
       ),
     );
