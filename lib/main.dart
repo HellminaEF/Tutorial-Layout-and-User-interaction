@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'tutorial_11_1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,7 +8,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -85,6 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
+
               Container(
                 margin: const EdgeInsets.symmetric(
                   horizontal: 10,
@@ -139,6 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
+
               Container(
                 child: Text(
                   'Riwayat Tes',
@@ -150,6 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
+
               Container(
                 height: 300,
                 child: ListView.builder(
@@ -182,6 +185,23 @@ class _MyHomePageState extends State<MyHomePage> {
                       ],
                     );
                   },
+                ),
+              ),
+
+              Container(
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Tutorial11Page(),
+                      ),
+                    );
+                  },
+                  child: const Text(
+                    'Go to Tutorial 11-1',
+                    style: TextStyle(fontSize: 16, color: Colors.blue),
+                  ),
                 ),
               ),
             ],
